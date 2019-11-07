@@ -9,7 +9,9 @@
     "lint:i": "standard src",
     "test": "NODE_ENV=test jest --forceExit --detectOpenHandles",
     "watch": "NODE_ENV=test jest --forceExit --watch --detectOpenHandles",
-    "code-fix": "standard --fix"
+    "code-fix": "standard --fix",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -22,17 +24,17 @@
   },
   "homepage": "https://github.com/GroceriStar/graphql-server#readme",
   "devDependencies": {
-    "@babel/cli": "7.4.4",
-    "@babel/core": "7.4.5",
-    "@babel/node": "7.4.5",
-    "@babel/plugin-proposal-class-properties": "7.4.4",
-    "@babel/preset-env": "7.4.5",
+    "@babel/cli": "7.7.0",
+    "@babel/core": "7.7.2",
+    "@babel/node": "7.7.0",
+    "@babel/plugin-proposal-class-properties": "7.7.0",
+    "@babel/preset-env": "7.7.1",
     "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "24.8.0",
+    "babel-jest": "24.9.0",
     "babel-plugin-module-resolver": "3.2.0",
-    "nodemon": "1.19.1",
-    "regenerator-runtime": "0.13.2",
-    "standard": "12.0.1"
+    "nodemon": "1.19.4",
+    "regenerator-runtime": "0.13.3",
+    "standard": "14.3.1"
   },
   "dependencies": {
     "@groceristar/groceristar-fetch": "^2.0.0",
@@ -42,6 +44,8 @@
     "graphql-yoga": "^1.16.9",
     "jest": "^24.0.0",
     "merge-graphql-schemas": "^1.5.8",
-    "supertest": "^4.0.0"
-  }
+    "supertest": "^4.0.0",
+    "snyk": "^1.232.0"
+  },
+  "snyk": true
 }
